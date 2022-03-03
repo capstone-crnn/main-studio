@@ -2,7 +2,8 @@
 	// Imports
 	import ActionBar from "../../common/ActionBar.svelte";
 	import StatusBar from "../../common/StatusBar.svelte";
-	import MonitorGraph from "../monitor/MonitorGraph.svelte";
+	import MonitorGraph from "./MonitorGraph.svelte";
+	import MonitorMetrics from "./MonitorMetrics.svelte";
 
 
 	let bpmLungs = 12;
@@ -11,25 +12,31 @@
 	let distance = 0.7;		// meters
 	let timeElapsed = 4;	// hours
 	
+	let isReady = false;
+	let isCalibrating = false;
+	let displayHeart = false;
+	let displayLungs = false;
+	let statusText = "Ready for calibration";
+	let statusIcon = "ready.svg";
+	
 	// States
-	$: isReady = false;
-	$: isCalibrating = false;
-	$: displayHeart = false;
-	$: displayLungs = false;
-	$: statusText = "Ready for calibration";
-
+	$: hideGraph = true;
 	$: actionBarConfig = [
 		{
 			text: "Calibrate",
+			image: "rec.svg",
 			disabled: false,
 			action: () => { 
 				isCalibrating = true;
 				isReady = false; 
+				hideGraph = true;
 				statusText = "Connecting...";
+				statusIcon = "loading.svg"
 			}
 		},
 		{
 			text: "Heart",
+			image: "heart-attack.svg",
 			disabled: !isReady || displayHeart,
 			action: () => { 
 				displayHeart = true;
@@ -38,6 +45,7 @@
 		},
 		{
 			text: "Lungs",
+			image: "human-lungs.svg",
 			disabled: !isReady || displayLungs,
 			action: () => { 
 				displayHeart = false;
@@ -48,70 +56,62 @@
 
 </script>
 
+
 <main>
-	<h1>Monitor</h1>
+	<ActionBar config={actionBarConfig} dir="left" class="self-stretch"/>
+	
+	<div class="container grid grid-cols-3 gap-1 pl-20">
+		
+		
+		{#if !isReady && !isCalibrating}
+			<div id="calibration" class="pt-8">
+				<h2>Touch to calibrate</h2>	
+			</div>
+		{:else if !isReady && isCalibrating}
+			<div id="calibration" class="pt-8">
+				<div class="h-full text-center align-middle border-2 rounded-full">
+					<h2> Calibrating... </h2>
+					<button on:click={() => {
+						isReady = true;
+						statusText = "Connected";
+						statusIcon = "check-mark.svg";
+						displayHeart = true;
+						hideGraph = false;
+					}}>
+						Ready
+					</button>
+				</div>	
+			</div>
+		{:else if (isReady && displayHeart)}
+			<MonitorMetrics type="heart" metrics={{
+				bpm: bpmHeart,
+				distance,
+				timeElapsed
+			}} />
+		{:else if (isReady && displayLungs)}
+			<MonitorMetrics type="lungs" metrics={{
+				bpm: bpmLungs,
+				distance,
+				timeElapsed
+			}} />
+		{/if}
+		
+		<div class="col-span-2 overflow-hidden">
+			<MonitorGraph {hideGraph} />
+		</div>
 
-	{#if !isReady && !isCalibrating}
-		<div id="calibration">
-			<h2>Touch to calibrate</h2>	
-		</div>
-	{:else if !isReady && isCalibrating}
-		<div id="calibration">
-			<h2>Calibrating...</h2>	
-			<button on:click={() => {
-				isReady = true;
-				statusText = "Connected";
-				displayHeart = true;
-			}}>
-				Ready
-			</button>
-		</div>
-	{:else if (isReady && displayHeart)}
-		<div id="metrics-heart">
-			<h2>{bpmHeart}bpm</h2>
-			<h3>Heart rate</h3>
-			
-			<h2>{distance}m</h2>
-			<h3>Distance</h3>	
-			
-			<h2>{timeElapsed}hrs</h2>
-			<h3>Time elapsed</h3>	
-		</div>
-	{:else if (isReady && displayLungs)}
-		<div id="metrics-lungs">
-			<h2>{bpmLungs}bpm</h2>
-			<h3>Respiratory rate</h3>
-			
-			<h2>{distance}m</h2>
-			<h3>Distance</h3>	
-			
-			<h2>{timeElapsed}hrs</h2>
-			<h3>Time elapsed</h3>	
-		</div>
-	{/if}
+	</div>
 
-	<!-- <MonitorGraph /> -->
+	<StatusBar {statusText} {statusIcon} />
 
-	<ActionBar config={actionBarConfig} />
-	<StatusBar {statusText} />
+	
+	
 </main>
+
 
 <style global lang="postcss">
 	@tailwind base;
 	@tailwind components;
 	@tailwind utilities;
-	
-	main {
-		text-align: center;
-		padding: 1em;
-		max-width: 240px;
-		margin: 0 auto;
-	}
 
-	h1 {
-		color: #ff3e00;
-		text-transform: uppercase;
-		font-size: 4em;
-		font-weight: 100;
-	}
 </style>
