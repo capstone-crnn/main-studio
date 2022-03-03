@@ -41,6 +41,7 @@
   },
   "dependencies": {
     "autoprefixer": "^9.8.8",
+    "chart.js": "^3.7.1",
     "d3": "^7.3.0",
     "postcss": "^7.0.39",
     "sirv-cli": "^2.0.0",
