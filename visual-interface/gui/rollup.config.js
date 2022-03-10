@@ -48,7 +48,7 @@ export default {
 			},
 		}),
 		svelte({
-			preprocess: sveltePreprocess({	/* UNCOMMENT TO ENABLE TAILWIND */
+			preprocess: sveltePreprocess({	/* COMMENT TO DISABLE TAILWIND */
 				sourceMap: !production,
 				postcss: {
 				  plugins: [require('tailwindcss')(), require('autoprefixer')()],

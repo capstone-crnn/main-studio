@@ -1,8 +1,7 @@
-const { app, BrowserWindow, icpMain } = require("electron");
-const { ipcMain } = require("electron/main");
+const { app, BrowserWindow, ipcMain } = require("electron");
 const { join } = require("path");
-
-
+const fs = require("fs");
+const process = require("process");
 
 
 app.whenReady().then(main).catch((err) => console.log(err));
@@ -18,6 +17,8 @@ function main() {
         useContentSize: true,
         resizable: false,
         webPreferences: {
+            nodeIntegration: true,
+            enableRemoteModules: true,
             preload: join(__dirname, "./preload.js")
         }
     })
@@ -25,9 +26,37 @@ function main() {
     window.loadFile(join(__dirname, "../public/index.html"));
     window.on("ready-to-show", window.show);
 
+    
     if (isDev) {
         // window.webContents.openDevTools();   // uncomment to show devTools on startup
-    }
+    }    
+    
+    
+    // Sending bpm data to UI
+    const filename = "bpm_data";
+    const path = process.cwd() + "\\electron\\" + filename;
+
+    fs.watch(path, (evt, file) => {
+        if (evt === "change") {
+            if (file === filename) {
+                fs.readFile(path, (err, data) => {
+                    if (err) {
+                        console.error("Error: ", err);
+                    }
+                    
+                    stream = [...data];
+                    window.webContents.send("data", stream);
+                })
+            } else {
+                console.log(`Error: Different file changed - ${file}`);
+            }
+        } else {
+            console.log(`Attention: ${file} experienced ${evt}`);
+        }
+    });
 }
 
-ipcMain.handleOnce("get/version", () => app.getVersion());
+
+ipcMain.handleOnce("get-version", () => app.getVersion());
+
+ipcMain.handleOnce('power-off', () => app.quit());
