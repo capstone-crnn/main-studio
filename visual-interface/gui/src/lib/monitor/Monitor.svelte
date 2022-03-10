@@ -54,6 +54,10 @@
 		}
 	]
 
+	api.Stream((evt, data) => {
+		bpmLungs = data;
+	});
+
 </script>
 
 
