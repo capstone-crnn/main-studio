@@ -61,11 +61,11 @@
       )
     )
   )
-  (symbol "AP2138N-3.3TRG1" (in_bom yes) (on_board yes)
+  (symbol "AP2139AK-3.3TRG1" (in_bom yes) (on_board yes)
     (property "Reference" "U?" (id 0) (at -3.81 6.35 0)
       (effects (font (size 1.27 1.27)))
     )
-    (property "Value" "AP2138N-3.3TRG1" (id 1) (at 0 -6.35 0)
+    (property "Value" "AP2139AK-3.3TRG1" (id 1) (at 0 -6.35 0)
       (effects (font (size 1.27 1.27)))
     )
     (property "Footprint" "" (id 2) (at 0 0 0)
@@ -74,13 +74,13 @@
     (property "Datasheet" "" (id 3) (at 0 0 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (symbol "AP2138N-3.3TRG1_0_1"
+    (symbol "AP2139AK-3.3TRG1_0_1"
       (rectangle (start -5.08 5.08) (end 5.08 -4.445)
         (stroke (width 0.1524) (type default) (color 0 0 0 0))
         (fill (type background))
       )
     )
-    (symbol "AP2138N-3.3TRG1_1_1"
+    (symbol "AP2139AK-3.3TRG1_1_1"
       (pin power_in line (at -7.62 3.175 0) (length 2.54)
         (name "Vin" (effects (font (size 1.27 1.27))))
         (number "1" (effects (font (size 1.27 1.27))))
