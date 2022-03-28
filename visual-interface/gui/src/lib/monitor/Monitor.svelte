@@ -1,5 +1,6 @@
 <script>
 	// Imports
+	import { bpmData } from './../../stores/stores.js';
 	import ActionBar from "../../common/ActionBar.svelte";
 	import StatusBar from "../../common/StatusBar.svelte";
 	import MonitorGraph from "./MonitorGraph.svelte";
@@ -31,7 +32,8 @@
 				isReady = false; 
 				hideGraph = true;
 				statusText = "Connecting...";
-				statusIcon = "loading.svg"
+				statusIcon = "loading.svg";
+				bpmData.set([]);
 			}
 		},
 		{
@@ -54,8 +56,32 @@
 		}
 	]
 
+	// Processing and storing data
 	api.Stream((evt, data) => {
-		bpmLungs = data;
+		// console.log("Data: ", data);
+		// if (data && data[0] && data[0] !== 0) {
+		if (data) {
+			bpmLungs = data;
+			let now = new Date().toLocaleTimeString('en-US', { 
+					hour12: false, 
+					hour: "numeric", 
+					minute: "numeric",
+					second: "numeric"
+			});
+			
+			console.log($bpmData.length);
+			if ($bpmData.length >= 100){
+				$bpmData = [...$bpmData.slice(1), {
+				value: data,
+				time: now
+				}];
+			} else {
+				$bpmData = [...$bpmData, {
+					value: data,
+					time: now
+				}];
+			}
+		}
 	});
 
 </script>

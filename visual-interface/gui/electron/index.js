@@ -16,6 +16,7 @@ function main() {
         show: false,
         useContentSize: true,
         resizable: false,
+        // kiosk: true,
         webPreferences: {
             nodeIntegration: true,
             enableRemoteModules: true,
@@ -28,7 +29,7 @@ function main() {
 
     
     if (isDev) {
-        // window.webContents.openDevTools();   // uncomment to show devTools on startup
+        window.webContents.openDevTools();   // uncomment to show devTools on startup
     }    
     
     
@@ -39,13 +40,15 @@ function main() {
     fs.watch(path, (evt, file) => {
         if (evt === "change") {
             if (file === filename) {
-                fs.readFile(path, (err, data) => {
+                fs.readFile(path, "utf-8", (err, data) => { // IMPORTANT: when using with C++, use "utf-8" parameter [NOTE]
                     if (err) {
                         console.error("Error: ", err);
                     }
                     
-                    stream = [...data];
-                    window.webContents.send("data", stream);
+                    // stream = [...data];
+                    // window.webContents.send("data", stream);
+                    
+                    window.webContents.send("data", data);
                 })
             } else {
                 console.log(`Error: Different file changed - ${file}`);
