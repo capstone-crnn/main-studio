@@ -1,17 +1,11 @@
 <script>
-	import { bpmData } from './../../stores/stores.js';
 	// Imports
 	import { afterUpdate } from "svelte";
 	import Chart from "chart.js/auto";
-	
-	// import * as subjectData from "../../data/subject4.js";	// TODO: temp data, remove later
+	import { bpmData } from './../../stores/stores.js';
 
 	// Props
 	export let hideGraph;
-	
-	// const data = subjectData.default;
-	// const xValues = data.map((d) => d["X_Value"]);	
-	// const yValues = data.map((d) => d["radar24-I"]);
 
 	let ctx;
 	let chartCanvas;
@@ -21,9 +15,6 @@
 	$: data = $bpmData;
 	$: xValues = data.map((d) => d["time"]);	
 	$: yValues = data.map((d) => d["value"]);
-
-	$: console.log("y: ", yValues);
-	$: console.log("x: ", xValues);
 
 	// States
 	$: config = {
@@ -56,6 +47,11 @@
 					y: {
 						suggestedMin: 10,    // minimum unless there is a lower value.
 						suggestedMax: 20,    // maximum unless there is a higher value.
+					}
+				},
+				plugins: {
+					legend: {
+						display: false
 					}
 				}
 			}

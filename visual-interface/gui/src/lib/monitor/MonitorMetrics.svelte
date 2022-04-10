@@ -25,7 +25,7 @@
     </h3>	
     
     <h2 class="pt-8 text-3xl font-extrabold">
-        {metrics.timeElapsed} <span class="font-normal">hrs</span>
+        {metrics.timeElapsed}
     </h2>
     <h3 class="text-2xl italic font-light">
         Time elapsed
