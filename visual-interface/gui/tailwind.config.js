@@ -1,4 +1,5 @@
 const production = !process.env.ROLLUP_WATCH;
+const colors = require('./node_modules/tailwindcss/colors');
 
 module.exports = {
   mode: "jit",
@@ -10,7 +11,14 @@ module.exports = {
   },
   darkMode: false, // or 'media' or 'class'
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        orange: colors.orange
+      },
+      fontFamily: {
+        jetbrains: ["JetBrains Mono", "monospace"]
+      }
+    },
   },
   variants: {
     extend: {},

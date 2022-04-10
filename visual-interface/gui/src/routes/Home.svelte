@@ -4,19 +4,30 @@
 
 </script>
 
-<main class="container h-full px-20 mx-auto my-auto text-center">
+<main class="container h-full pt-10 mx-auto my-auto text-center">
 
-	<div class="pt-12">
-		<img src="graphics/GroupS01_Logo-02.svg" alt="Logo" class="inline m-2 align-middle w-28" />
-		<h1 class="inline py-12 text-6xl align-middle">
+	<div class="flex flex-row items-center justify-center">
+		<img src="graphics/GroupS01_Logo-02-darker.svg" alt="Logo" class="inline w-64 pr-8 m-2 align-middle" />
+		<div class="flex flex-col items-center justify-center">
+			<h1 class="inline py-12 align-middle font-jetbrains text-7xl">
+				finderFly
+			</h1>
+			<a href="/mode" use:link class="block rounded-3xl shadow-lg shadow-[#fcc100] font-sans tracking-wide font-light bg-[#fca232] text-white px-6 py-4 text-4xl w-full">
+				START
+			</a>
+		</div>
+	</div>
+	<!-- <div class="pt-12">
+		<img src="graphics/GroupS01_Logo-02-darker.svg" alt="Logo" class="inline m-2 align-middle w-36" />
+		<h1 class="inline py-12 font-mono align-middle text-7xl">
 			finderFly
 		</h1>
 	</div>
-	<a href="/mode" use:link class="items-center block pt-6">
-		<button class="px-6 py-4 font-sans text-2xl rounded-lg">
-			START
-		</button>
-	</a>
+	<div class="items-center pt-6">
+		<a href="/mode" use:link class="items-center block rounded-full mx-44 shadow-lg shadow-[#fcc100] font-sans tracking-wide font-light bg-[#fca232] text-white px-6 py-4 text-4xl">
+				START
+		</a>
+	</div> -->
 </main>
 
 <style global lang="postcss">
@@ -25,6 +36,11 @@
 	@tailwind utilities;
 
 	h1 { 
-		color: #F28E44;
+		color: #fca232;
+	}
+
+	@font-face {
+		font-family: 'JetBrains Mono', monospace;
+		src: url("fonts/JetBrainsMonoNL-Regular.ttf");
 	}
 </style>
