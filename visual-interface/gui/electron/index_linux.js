@@ -20,7 +20,7 @@ function main() {
         show: false,
         useContentSize: true,
         resizable: false,
-        // kiosk: true,
+        kiosk: true,
         webPreferences: {
             nodeIntegration: true,
             enableRemoteModules: true,
@@ -30,25 +30,25 @@ function main() {
 
     window.loadFile(join(__dirname, "../public/index.html"));
     window.on("ready-to-show", window.show);
-
-    // window.webContents.on('dom-ready', (event)=> {
-    //     let css = '* { cursor: none !important; }';
-    //     window.webContents.insertCSS(css);
-    // });
+    
+    window.webContents.on('dom-ready', (event)=> {
+        let css = '* { cursor: none !important; }';
+        window.webContents.insertCSS(css);
+    });
     
     if (isDev) {
-        window.webContents.openDevTools();
+        //window.webContents.openDevTools();   // uncomment to show devTools on startup
     }    
     
     
     // Sending bpm data to UI
     const filename = "shared_file";
-    const path = process.cwd() + "\\electron\\" + filename;
+    const path = process.cwd() + "/electron/" + filename;
 
     fs.watch(path, (evt, file) => {
         if (evt === "change") {
             if (file === filename) {
-                fs.readFile(path, "utf-8", (err, data) => {
+                fs.readFile(path, "utf-8", (err, data) => { // IMPORTANT: when using with C++, use "utf-8" parameter [NOTE]
                     if (err) {
                         console.error("Error: ", err);
                     }
@@ -69,11 +69,17 @@ function main() {
 
 ipcMain.handleOnce("calibrate", () => {
     // const filename = "dsp.py";
-    // const path = process.cwd() + "\\electron\\" + filename;
-    // pyshell.run(path, null, (err, results)  => {
-    //     if  (err)  throw err;
-    //     console.log('dsp.py finished.');
-    //     console.log('results', results);
+    // const path = process.cwd() + "/electron/" + filename;
+    // // pyshell.run(path, null, (err, results)  => {
+    // //     if (err) {
+    // //         console.log(err);
+    // //     };
+    // //     console.log('dsp.py finished.');
+    // //     console.log('results', results);
+    // // });
+    // var python = require('child_process').spawn('python3', [path]);
+    // python.stdout.on('data',function(data){
+	//     console.log("data: ",data.toString('utf8'));
     // });
 });
 ipcMain.handleOnce("get-version", () => app.getVersion());

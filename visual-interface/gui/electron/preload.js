@@ -5,6 +5,7 @@ const { contextBridge, ipcRenderer } = require("electron");
 const WINDOW_API = {
     GetVersion: () => ipcRenderer.invoke("get-version"),
     PowerOff: () => ipcRenderer.invoke("power-off"),
+    Calibrate: () => ipcRenderer.invoke("calibrate"),
     Stream: (callback) => {
         // Waiting on bpm data from UI
         ipcRenderer.on("data", (evt, data) => {
