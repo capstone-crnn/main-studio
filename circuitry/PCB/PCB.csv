@@ -1,0 +1,109 @@
+Source:,C:\Users\rmudh\Documents\main-studio\circuitry\PCB\PCB.kicad_sch,,,,,
+Date:,2022-03-27 19:17,,,,,
+Tool:,Eeschema (6.0.2),,,,,
+Generator:,C:\Program Files\KiCad\6.0\bin\scripting\plugins/bom_csv_grouped_by_value.py,,,,,
+Component Count:,75,,,,,
+,,,,,,
+Individual Components:,,,,,,
+,,,,,,
+Item,Qty,Reference(s),Value,LibPart,Footprint,Datasheet
+,,C1,0.1u,Device:C_Small,Capacitor_SMD:C_1206_3216Metric_Pad1.33x1.80mm_HandSolder,~
+,,C2,0.1u,Device:C_Small,Capacitor_SMD:C_1206_3216Metric_Pad1.33x1.80mm_HandSolder,~
+,,C3,1u,Device:C_Small,Capacitor_SMD:C_1206_3216Metric_Pad1.33x1.80mm_HandSolder,~
+,,C4,330u,Device:C_Polarized_Small,Capacitor_Tantalum_SMD:CP_EIA-3528-12_Kemet-T_Pad1.50x2.35mm_HandSolder,~
+,,C5,330u,Device:C_Polarized_Small,Capacitor_Tantalum_SMD:CP_EIA-3528-12_Kemet-T_Pad1.50x2.35mm_HandSolder,~
+,,C6,0.1u,Device:C_Small,Capacitor_SMD:C_1206_3216Metric_Pad1.33x1.80mm_HandSolder,~
+,,C7,4.7u,Device:C_Small,Capacitor_SMD:C_1206_3216Metric_Pad1.33x1.80mm_HandSolder,~
+,,C8,4.7u,Device:C_Small,Capacitor_SMD:C_1206_3216Metric_Pad1.33x1.80mm_HandSolder,~
+,,C9,4.7u,Device:C_Small,Capacitor_SMD:C_1206_3216Metric_Pad1.33x1.80mm_HandSolder,~
+,,C10,330u,Device:C_Polarized_Small,Capacitor_Tantalum_SMD:CP_EIA-3528-12_Kemet-T_Pad1.50x2.35mm_HandSolder,~
+,,C11,330u,Device:C_Polarized_Small,Capacitor_Tantalum_SMD:CP_EIA-3528-12_Kemet-T_Pad1.50x2.35mm_HandSolder,~
+,,C12,4.7u,Device:C_Small,Capacitor_SMD:C_1206_3216Metric_Pad1.33x1.80mm_HandSolder,~
+,,C13,0.1u,Device:C_Small,Capacitor_SMD:C_1206_3216Metric_Pad1.33x1.80mm_HandSolder,~
+,,C14,4.7u,Device:C_Small,Capacitor_SMD:C_1206_3216Metric_Pad1.33x1.80mm_HandSolder,~
+,,C15,4.7u,Device:C_Small,Capacitor_SMD:C_1206_3216Metric_Pad1.33x1.80mm_HandSolder,~
+,,C17,330u,Device:C_Polarized_Small,Capacitor_Tantalum_SMD:CP_EIA-3528-12_Kemet-T_Pad1.50x2.35mm_HandSolder,~
+,,C18,330u,Device:C_Polarized_Small,Capacitor_Tantalum_SMD:CP_EIA-3528-12_Kemet-T_Pad1.50x2.35mm_HandSolder,~
+,,C19,0.1u,Device:C_Small,Capacitor_SMD:C_1206_3216Metric_Pad1.33x1.80mm_HandSolder,~
+,,C20,4.7u,Device:C_Small,Capacitor_SMD:C_1206_3216Metric_Pad1.33x1.80mm_HandSolder,~
+,,C21,4.7u,Device:C_Small,Capacitor_SMD:C_1206_3216Metric_Pad1.33x1.80mm_HandSolder,~
+,,C22,4.7u,Device:C_Small,Capacitor_SMD:C_1206_3216Metric_Pad1.33x1.80mm_HandSolder,~
+,,C23,0.1u,Device:C_Small,Capacitor_SMD:C_1206_3216Metric_Pad1.33x1.80mm_HandSolder,~
+,,C24,330u,Device:C_Polarized_Small,Capacitor_Tantalum_SMD:CP_EIA-3528-12_Kemet-T_Pad1.50x2.35mm_HandSolder,~
+,,C25,330u,Device:C_Polarized_Small,Capacitor_Tantalum_SMD:CP_EIA-3528-12_Kemet-T_Pad1.50x2.35mm_HandSolder,~
+,,C26,0.1u,Device:C_Small,Capacitor_SMD:C_1206_3216Metric_Pad1.33x1.80mm_HandSolder,~
+,,C28,4.7u,Device:C_Small,Capacitor_SMD:C_1206_3216Metric_Pad1.33x1.80mm_HandSolder,~
+,,C29,4.7u,Device:C_Small,Capacitor_SMD:C_1206_3216Metric_Pad1.33x1.80mm_HandSolder,~
+,,C30,4.7u,Device:C_Small,Capacitor_SMD:C_1206_3216Metric_Pad1.33x1.80mm_HandSolder,~
+,,C31,4.7u,Device:C_Small,Capacitor_SMD:C_1206_3216Metric_Pad1.33x1.80mm_HandSolder,~
+,,D1,RED,Device:LED_Small,LED_SMD:LED_1206_3216Metric_Pad1.42x1.75mm_HandSolder,~
+,,I1,RV1-2,Connector:TestPoint_Small,TestPoint:TestPoint_Pad_D2.5mm,~
+,,I2,RV1-2,Connector:TestPoint_Small,TestPoint:TestPoint_Pad_D2.5mm,~
+,,J1,K-LC5,Proj_Lib:K-LC5,Connector_PinSocket_2.54mm:PinSocket_1x05_P2.54mm_Vertical,
+,,J2,ADS1115,Proj_Lib:ADS1115,Connector_PinSocket_2.54mm:PinSocket_1x10_P2.54mm_Vertical,
+,,J3,I/Q-amp,Proj_Lib:I{slash}Q-amp,Connector_PinSocket_2.54mm:PinSocket_1x02_P2.54mm_Vertical,
+,,J4,Raspberry_Pi_2_3,Connector:Raspberry_Pi_2_3,Connector_PinSocket_2.54mm:PinSocket_2x20_P2.54mm_Vertical,https://www.raspberrypi.org/documentation/hardware/raspberrypi/schematics/rpi_SCH_3bplus_1p0_reduced.pdf
+,,Q1,RV1-2,Connector:TestPoint_Small,TestPoint:TestPoint_Pad_D2.5mm,~
+,,Q2,RV1-2,Connector:TestPoint_Small,TestPoint:TestPoint_Pad_D2.5mm,~
+,,R1,10k,Device:R_Small,Resistor_SMD:R_1206_3216Metric_Pad1.30x1.75mm_HandSolder,~
+,,R2,10k,Device:R_Small,Resistor_SMD:R_1206_3216Metric_Pad1.30x1.75mm_HandSolder,~
+,,R3,10k,Device:R_Small,Resistor_SMD:R_1206_3216Metric_Pad1.30x1.75mm_HandSolder,~
+,,R4,10k,Device:R_Small,Resistor_SMD:R_1206_3216Metric_Pad1.30x1.75mm_HandSolder,~
+,,R5,10k,Device:R_Small,Resistor_SMD:R_1206_3216Metric_Pad1.30x1.75mm_HandSolder,~
+,,R6,10k,Device:R_Small,Resistor_SMD:R_1206_3216Metric_Pad1.30x1.75mm_HandSolder,~
+,,R7,1M,Device:R_Small,Resistor_SMD:R_1206_3216Metric_Pad1.30x1.75mm_HandSolder,~
+,,R8,1M,Device:R_Small,Resistor_SMD:R_1206_3216Metric_Pad1.30x1.75mm_HandSolder,~
+,,R9,10k,Device:R_Small,Resistor_SMD:R_1206_3216Metric_Pad1.30x1.75mm_HandSolder,~
+,,R10,10k,Device:R_Small,Resistor_SMD:R_1206_3216Metric_Pad1.30x1.75mm_HandSolder,~
+,,R11,10k,Device:R_Small,Resistor_SMD:R_1206_3216Metric_Pad1.30x1.75mm_HandSolder,~
+,,R12,10k,Device:R_Small,Resistor_SMD:R_1206_3216Metric_Pad1.30x1.75mm_HandSolder,~
+,,R13,10k,Device:R_Small,Resistor_SMD:R_1206_3216Metric_Pad1.30x1.75mm_HandSolder,~
+,,R14,10k,Device:R_Small,Resistor_SMD:R_1206_3216Metric_Pad1.30x1.75mm_HandSolder,~
+,,R15,10k,Device:R_Small,Resistor_SMD:R_1206_3216Metric_Pad1.30x1.75mm_HandSolder,~
+,,R16,10k,Device:R_Small,Resistor_SMD:R_1206_3216Metric_Pad1.30x1.75mm_HandSolder,~
+,,R17,10k,Device:R_Small,Resistor_SMD:R_1206_3216Metric_Pad1.30x1.75mm_HandSolder,~
+,,R18,10k,Device:R_Small,Resistor_SMD:R_1206_3216Metric_Pad1.30x1.75mm_HandSolder,~
+,,R19,10k,Device:R_Small,Resistor_SMD:R_1206_3216Metric_Pad1.30x1.75mm_HandSolder,~
+,,R20,10k,Device:R_Small,Resistor_SMD:R_1206_3216Metric_Pad1.30x1.75mm_HandSolder,~
+,,R21,10k,Device:R_Small,Resistor_SMD:R_1206_3216Metric_Pad1.30x1.75mm_HandSolder,~
+,,R22,20k,Device:R_Small,Resistor_SMD:R_1206_3216Metric_Pad1.30x1.75mm_HandSolder,~
+,,R23,470,Device:R_Small,Resistor_SMD:R_1206_3216Metric_Pad1.30x1.75mm_HandSolder,~
+,,RV1,1M,Device:R_Potentiometer_Small,Proj_Lib:ST4ETA105,~
+,,RV2,1M,Device:R_Potentiometer_Small,Proj_Lib:ST4ETA105,~
+,,RV3,1M,Device:R_Potentiometer_Small,Proj_Lib:ST4ETA105,~
+,,RV4,1M,Device:R_Potentiometer_Small,Proj_Lib:ST4ETA105,~
+,,SW1,SW_SPDT,Switch:SW_SPDT,Proj_Lib:PCM12SMTR,~
+,,TP3,RV1-3,Connector:TestPoint_Small,TestPoint:TestPoint_Pad_D2.5mm,~
+,,TP4,RV1-3,Connector:TestPoint_Small,TestPoint:TestPoint_Pad_D2.5mm,~
+,,TP7,RV1-3,Connector:TestPoint_Small,TestPoint:TestPoint_Pad_D2.5mm,~
+,,TP8,RV1-3,Connector:TestPoint_Small,TestPoint:TestPoint_Pad_D2.5mm,~
+,,U1,MCP6022,Amplifier_Operational:MCP6022,Package_SO:SOIC-8_3.9x4.9mm_P1.27mm,http://ww1.microchip.com/downloads/en/devicedoc/20001685e.pdf
+,,U2,AP2139AK-3.3TRG1,Proj_Lib:AP2139AK-3.3TRG1,Package_TO_SOT_SMD:SOT-23-5_HandSoldering,
+,,U3,MCP6022,Amplifier_Operational:MCP6022,Package_SO:SOIC-8_3.9x4.9mm_P1.27mm,http://ww1.microchip.com/downloads/en/devicedoc/20001685e.pdf
+,,U4,MCP6022,Amplifier_Operational:MCP6022,Package_SO:SOIC-8_3.9x4.9mm_P1.27mm,http://ww1.microchip.com/downloads/en/devicedoc/20001685e.pdf
+,,U5,MCP6022,Amplifier_Operational:MCP6022,Package_SO:SOIC-8_3.9x4.9mm_P1.27mm,http://ww1.microchip.com/downloads/en/devicedoc/20001685e.pdf
+,,,,,,
+,,,,,,
+,,,,,,
+Collated Components:,,,,,,
+,,,,,,
+Item,Qty,Reference(s),Value,LibPart,Footprint,Datasheet
+1,7,"C1, C2, C6, C13, C19, C23, C26",0.1u,Device:C_Small,Capacitor_SMD:C_1206_3216Metric_Pad1.33x1.80mm_HandSolder,~
+2,1,C3,1u,Device:C_Small,Capacitor_SMD:C_1206_3216Metric_Pad1.33x1.80mm_HandSolder,~
+3,8,"C4, C5, C10, C11, C17, C18, C24, C25",330u,Device:C_Polarized_Small,Capacitor_Tantalum_SMD:CP_EIA-3528-12_Kemet-T_Pad1.50x2.35mm_HandSolder,~
+4,13,"C7, C8, C9, C12, C14, C15, C20, C21, C22, C28, C29, C30, C31",4.7u,Device:C_Small,Capacitor_SMD:C_1206_3216Metric_Pad1.33x1.80mm_HandSolder,~
+5,1,D1,RED,Device:LED_Small,LED_SMD:LED_1206_3216Metric_Pad1.42x1.75mm_HandSolder,~
+6,4,"I1, I2, Q1, Q2",RV1-2,Connector:TestPoint_Small,TestPoint:TestPoint_Pad_D2.5mm,~
+7,1,J1,K-LC5,Proj_Lib:K-LC5,Connector_PinSocket_2.54mm:PinSocket_1x05_P2.54mm_Vertical,
+8,1,J2,ADS1115,Proj_Lib:ADS1115,Connector_PinSocket_2.54mm:PinSocket_1x10_P2.54mm_Vertical,
+9,1,J3,I/Q-amp,Proj_Lib:I{slash}Q-amp,Connector_PinSocket_2.54mm:PinSocket_1x02_P2.54mm_Vertical,
+10,1,J4,Raspberry_Pi_2_3,Connector:Raspberry_Pi_2_3,Connector_PinSocket_2.54mm:PinSocket_2x20_P2.54mm_Vertical,https://www.raspberrypi.org/documentation/hardware/raspberrypi/schematics/rpi_SCH_3bplus_1p0_reduced.pdf
+11,19,"R1, R2, R3, R4, R5, R6, R9, R10, R11, R12, R13, R14, R15, R16, R17, R18, R19, R20, R21",10k,Device:R_Small,Resistor_SMD:R_1206_3216Metric_Pad1.30x1.75mm_HandSolder,~
+12,2,"R7, R8",1M,Device:R_Small,Resistor_SMD:R_1206_3216Metric_Pad1.30x1.75mm_HandSolder,~
+13,1,R22,20k,Device:R_Small,Resistor_SMD:R_1206_3216Metric_Pad1.30x1.75mm_HandSolder,~
+14,1,R23,470,Device:R_Small,Resistor_SMD:R_1206_3216Metric_Pad1.30x1.75mm_HandSolder,~
+15,4,"RV1, RV2, RV3, RV4",1M,Device:R_Potentiometer_Small,Proj_Lib:ST4ETA105,~
+16,1,SW1,SW_SPDT,Switch:SW_SPDT,Proj_Lib:PCM12SMTR,~
+17,4,"TP3, TP4, TP7, TP8",RV1-3,Connector:TestPoint_Small,TestPoint:TestPoint_Pad_D2.5mm,~
+18,4,"U1, U3, U4, U5",MCP6022,Amplifier_Operational:MCP6022,Package_SO:SOIC-8_3.9x4.9mm_P1.27mm,http://ww1.microchip.com/downloads/en/devicedoc/20001685e.pdf
+19,1,U2,AP2139AK-3.3TRG1,Proj_Lib:AP2139AK-3.3TRG1,Package_TO_SOT_SMD:SOT-23-5_HandSoldering,
